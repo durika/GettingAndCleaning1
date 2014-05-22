@@ -85,5 +85,5 @@ rm(colList)
 
 #5.1. Calculate averages of all needed metrics and write to a file
 tidyData <- myData[, lapply(.SD, mean), by = c("type","activity","subjectid")]
-write.table(tidyData, "avg_sensor_measures.csv", sep=",", row.names=FALSE)
+write.table(tidyData, "avg_sensor_measures.txt", sep=",", row.names=FALSE)
 rm(myData)
